@@ -1,0 +1,35 @@
+name: myfirstworkflow
+
+on: push
+
+jobs: 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: get code
+      uses: actions/checkout@v3
+    - name: Install dependencies
+      run: npm install
+    - name: Test the code
+      run: npm run test
+
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: get code
+      uses: actions/checkout@v3
+    - name: Install dependencies
+      run: npm install
+    - name: lint the code
+      run: npm run lint 
+
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: get code
+      uses: actions/checkout@v3
+    - name: Install dependencies
+      run: npm install
+    - name: deploy
+      run: echo "Deploy"
+    
