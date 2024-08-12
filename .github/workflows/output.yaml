@@ -1,5 +1,5 @@
 name: displaying the out =out 
-on: issue
+on: issues
 jobs:
   Info:
     runs-on: ubuntu-latest
